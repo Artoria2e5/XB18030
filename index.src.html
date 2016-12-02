@@ -1,25 +1,27 @@
-<h1>The WTF-8 encoding</h1>
+<h1>The XB 18030 convention</h1>
 <pre class='metadata'>
-Shortname: wtf-8
+Shortname: xb-18030
 Status: LS
 Boilerplate: omit feedback-header
-!Issue tracking: <a href="https://github.com/SimonSapin/wtf-8/issues">On GitHub</a>
-!Change history: <a href="https://github.com/SimonSapin/wtf-8/commits/gh-pages">On GitHub</a>
+!Issue tracking: <a href="https://github.com/Artoria2e5/XB18030/issues">On GitHub</a>
+!Change history: <a href="https://github.com/Artoria2e5/XB18030/issues/commits/gh-pages">On GitHub</a>
 !Last updated: [DATE]
-Editor: Simon Sapin, Mozilla https://www.mozilla.org/, https://exyr.org/
-Abstract: WTF-8 (Wobbly Transformation Format − 8-bit) is a superset of <a>UTF-8</a> that encodes <a>surrogate code points</a> if they are not in a <a lt="surrogate code point pair">pair</a>. It represents, in a way compatible with UTF-8, text from systems such as JavaScript and Windows that use <a>UTF-16</a> internally but don’t enforce the <a>well-formedness</a> invariant that surrogates must be paired.
+Editor: Mingye Wang
+Abstract: XB 18030 (Mouge Biaozhun 18030) is a convention of <a>GB 18030</a> that encodes <a>surrogate code points</a> as <a>user-defined characters</a> if they are not in a <a lt="surrogate code point pair">pair</a>. It represents, in a way mostly compatible with GB 18030, text from systems such as JavaScript and Windows that use <a>UTF-16</a> internally but don’t enforce the <a>well-formedness</a> invariant that surrogates must be paired.
 </pre>
 
-<link href="logo-wtf-8.svg" rel="icon">
-<p class=logo><img src=logo-wtf-8.svg width=100 height=100>
+<link href="logo-xb18030.svg" rel="icon">
+<p class=logo><img src=logo-xb18030.svg width=100 height=100>
 
 
 <h2 id=intended-audience>
 Intended audience</h2>
 
-  <a>WTF-8</a> is a hack intended to be used internally in self-contained systems
+  <a>XB 18030</a> is a hack intended to be used internally in self-contained systems
   with components that need to support <a>potentially ill-formed UTF-16</a>
-  for legacy reasons.
+  for legacy reasons.  It is <a>WTF-8</a> for who wants to use <a>GB 18030</a> as
+  a <a>Unicode Transformation Format</a>, and still misses the <a>surrogate code
+  points</a>.
 
   Any <a>WTF-8</a> data <em>must</em> be converted
   to a <a lt="Unicode text">Unicode</a> encoding at the system’s boundary
